@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <TextView
+        android:id="@+id/text_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Phone Information:"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/white"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/text_devName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_head"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Device Name: "
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_IMEI1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_devName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="IMEI1: "
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_IMEI2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_devName"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="IMEI2: "
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_IMEI1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Andorid Version: "
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_version"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="CPU: "
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_ram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_cpu"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="RAM: "
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_ram"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Storage: "
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_storage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Generate Report"
+        android:textAlignment="center" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/report"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/buttonTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/Row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/hardwareInfo"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp">
+
+                    <ImageButton
+                        android:id="@+id/Button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon1" />
+
+                    <TextView
+                        android:id="@+id/btnText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Hardware Info"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/systemInfo"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="30dp">
+
+                    <ImageButton
+                        android:id="@+id/Button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon2" />
+
+                    <TextView
+                        android:id="@+id/btnText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="System Info"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/hardwareTest"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp">
+
+                    <ImageButton
+                        android:id="@+id/Button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon3" />
+
+                    <TextView
+                        android:id="@+id/btnText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Test Hardware"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/sensorTest"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:clickable="true"
+                    android:layout_marginLeft="30dp">
+
+                    <ImageButton
+                        android:id="@+id/Button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon4" />
+
+                    <TextView
+                        android:id="@+id/btnText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Test Sensors"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/networkTest"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp">
+
+                    <ImageButton
+                        android:id="@+id/Button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon5" />
+
+                    <TextView
+                        android:id="@+id/btnText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Test Network"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/installedApps"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="30dp">
+
+                    <ImageButton
+                        android:id="@+id/Button6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FFFFFF"
+                        app:srcCompat="@drawable/icon6" />
+
+                    <TextView
+                        android:id="@+id/btnText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Installed Apps"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/endText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/mobile_diagnostic_tool"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

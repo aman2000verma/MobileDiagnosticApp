@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12FFFF8D">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Please click whether the test passed or failed?"
+        android:textAlignment="center"
+        android:textSize="24dp" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_weight="0"
+        android:width="200dp"
+        android:height="100dp"
+        android:backgroundTint="#CCFF90"
+        android:text="Pass"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_weight="0"
+        android:width="200dp"
+        android:height="100dp"
+        android:backgroundTint="#FF9E80"
+        android:text="Fail"
+        android:textSize="24dp" />
+
+</RelativeLayout>
